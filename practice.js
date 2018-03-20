@@ -238,10 +238,11 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
   
 //Code Here
 function addTen(numbers){
+  var trueNum = [];
   for(i=0; i<numbers.length; i++){
-    numbers[i] += 10;
+    trueNum.push(parseInt(numbers[i]) + 10);
   }
-  return numbers;
+  return trueNum;
 }
 
 
@@ -267,6 +268,14 @@ for(var i = 0; i < num2; i++){
 */
 
 //Code Here
+function longer(arr1, arr2){
+  if(arr1.length >= arr2.length){
+    return arr1;
+  }
+  else if(arr1.length < arr2.length){
+    return arr2;
+  }
+}
 
 
 
@@ -279,6 +288,21 @@ for(var i = 0; i < num2; i++){
 */
 
 //Code Here
+function both(arr1, arr2){
+  var newArray = [];
+  for(i=0; i<arr1.length; i++){
+    if(arr2.indexOf(arr1[i]) !== -1){
+        newArray.push(arr1[i])
+        console.log(newArray);
+    }
+  }
+  return newArray;
+}
+
+// function both(arr1, arr2){
+//   var newArray = [];
+
+// }
 
 
 
@@ -319,7 +343,12 @@ var colt = {
 */
 
 //Code Here
+devMountainEmployees.push(tyler);
+devMountainEmployees.push(cahlan);
+devMountainEmployees.push(ryan);
+devMountainEmployees.push(colt);
 
+console.log(devMountainEmployees.length);
 
 
 /*
@@ -328,7 +357,11 @@ var colt = {
 */
 
 //Code Here
-
+for(i=0; i<devMountainEmployees.length; i++){
+  if(devMountainEmployees[i].name === 'Cahlan'){
+    devMountainEmployees.splice(i,1);
+  }
+}
 
 
 ////////// PROBLEM 13 //////////
@@ -340,7 +373,7 @@ var colt = {
 */
 
 //Code Here
-
+var users=[]
 
 
 /*
@@ -359,6 +392,26 @@ var user1 = {
 // Do not edit the code above.
 
 //Code Here
+users[0] = {
+  name: "Name1",
+  email: "email1",
+  password: "password1",
+  username: "username1"
+}
+users[1] = {
+  name: "Name2",
+  email: "email2",
+  password: "password2",
+  username: "username2"
+}
+users[2] = {
+  name: "Name3",
+  email: "email3",
+  password: "password3",
+  username: "username3"
+}
+users[3] = user1;
+
 
 
 
@@ -373,8 +426,16 @@ var user1 = {
 */
 
 //Code Here
+function deleteAcct(arr){
+  for(i=0; i<arr.length; i++){
+    if(arr[i].email === 'tylermcginnis33@gmail.com'){
+      arr.splice(i,1)
+    }
+  }
+  return arr;
+}
 
-
+deleteAcct(users)
 
 /*
   The activity we just did is very much how data works in 'the real world'.
